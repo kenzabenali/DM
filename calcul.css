@@ -1,0 +1,77 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: Gotham Rounded, sans-serif;
+  font-weight: normal;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: rgba(36, 36, 120, 0.667);
+}
+
+.grid-main {
+  display: grid;
+
+  place-content: center;
+  min-height: 100vh;
+
+  grid-template-areas:
+    "a a"
+    "op op"
+    "nmbr symb";
+
+  grid-template-rows: 100px 100px 400px;
+  gap: 3px;
+}
+
+.grid-affiche {
+  grid-area: a;
+}
+.grid-affiche {
+  background: rgba(8, 8, 12, 0.667);
+  display: grid;
+  grid-template-rows: 100px;
+}
+
+.grid-op {
+  grid-area: op;
+}
+.grid-op {
+  display: grid;
+  grid-template-columns: repeat(2, 200px);
+  background-color: rgba(171, 139, 139, 0.75);
+}
+
+.grid-nmbr {
+  grid-area: nmbr;
+}
+.grid-nmbr {
+  display: grid;
+
+  background-color: rgba(171, 139, 139, 0.75);
+  grid-template-columns: repeat(3, 100px);
+}
+
+.grid-symb {
+  grid-area: symb;
+}
+.grid-symb {
+  display: grid;
+
+  background-color: rgba(171, 139, 139, 0.75);
+  grid-template-columns: 100px;
+}
+
+.grid-main div {
+  /* display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%; */
+  cursor: pointer;
+  font-size: 3rem;
+  border: 1px solid rgb(186, 130, 130);
+  outline: none;
+}
